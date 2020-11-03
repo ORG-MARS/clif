@@ -30,11 +30,10 @@ include(FindPkgConfig)
 # Lookup include and library directories using pkg-config.
 pkg_check_modules(GOOGLE_PROTOBUF REQUIRED protobuf)
 
-pkg_check_modules(GOOGLE_GLOG REQUIRED libglog)
-
 find_package(absl REQUIRED)
 find_package(Clang REQUIRED)
 find_package(LLVM 11 REQUIRED)
+find_package(Glog REQUIRED)
 find_package(GTest REQUIRED)
 
 function(add_protobuf_include_directories)
